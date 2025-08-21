@@ -1,4 +1,3 @@
-
 from basic_ops import Basic
 from logarithmic_ops import logs
 from trigonometric_ops import trigz
