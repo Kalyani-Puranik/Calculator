@@ -1,5 +1,5 @@
 import math
-class Logs:
+class logs:
     def log_of(self, x):
         try:
             return math.log10(x)
