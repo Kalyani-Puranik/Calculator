@@ -42,7 +42,7 @@ class trigz:
         except Exception as e:
             return f"Error: {e}"
 
-    def invsin_of(self, x):
+    def inv_sin_of(self, x):
         try:
             return math.asin(x)
         except ValueError:
