@@ -24,7 +24,7 @@ class logs:
 
 
 def main():
-    calc = Logs()
+    calc = logs()
 
     while True:
         print("\n--- Math Menu ---")
