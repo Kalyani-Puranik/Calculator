@@ -1,6 +1,5 @@
 import math
 class trigz:
-    # Trigonometric functions
     def sin_of(self, x):
         try:
             return math.sin(x)
@@ -43,8 +42,7 @@ class trigz:
         except Exception as e:
             return f"Error: {e}"
 
-    # Inverse Trigonometric functions
-    def asin_of(self, x):
+    def invsin_of(self, x):
         try:
             return math.asin(x)
         except ValueError:
@@ -52,7 +50,7 @@ class trigz:
         except Exception as e:
             return f"Error: {e}"
 
-    def acos_of(self, x):
+    def inv_cos_of(self, x):
         try:
             return math.acos(x)
         except ValueError:
@@ -60,7 +58,7 @@ class trigz:
         except Exception as e:
             return f"Error: {e}"
 
-    def atan_of(self, x):
+    def inv_tan_of(self, x):
         try:
             return math.atan(x)
         except Exception as e:
@@ -78,9 +76,9 @@ def main():
         print("4. cosec(x)")
         print("5. sec(x)")
         print("6. cot(x)")
-        print("7. asin(x)  [inverse sin]")
-        print("8. acos(x)  [inverse cos]")
-        print("9. atan(x)  [inverse tan]")
+        print("7. inv_sin(x)  [inverse sin]")
+        print("8. inv_cos(x)  [inverse cos]")
+        print("9. inv_tan(x)  [inverse tan]")
         print("10. Exit")
 
         choice = input("Enter your choice (1-10): ")
@@ -113,7 +111,7 @@ def main():
                     print("Result (radians):", calc.atan_of(x))
 
             elif choice == "10":
-                print("Exiting... Goodbye!")
+                print("Goodbye!")
                 break
 
             else:

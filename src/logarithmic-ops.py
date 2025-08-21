@@ -1,6 +1,5 @@
 import math
 class Logs:
-    # function for log base 10
     def log_of(self, x):
         try:
             return math.log10(x)
@@ -9,7 +8,6 @@ class Logs:
         except Exception as e:
             return f"Unexpected error: {e}"
 
-    # function for natural log (ln)
     def natural_log(self, x):
         try:
             return math.log(x)  # default base = e
@@ -18,7 +16,6 @@ class Logs:
         except Exception as e:
             return f"Unexpected error: {e}"
 
-    # function for exponents
     def egzponets(self, base, power):
         try:
             return math.pow(base, power)
@@ -61,7 +58,7 @@ def main():
                 print("Invalid input! Please enter valid numbers.")
 
         elif choice == "4":
-            print("Exiting... Goodbye!")
+            print("Goodbye!")
             break
 
         else:
