@@ -10,19 +10,22 @@ def main():
         print("3. Trigonometric Calculator")
         print("4. Exit")
 
-        choice = input("Enter your choice (1-4): ")
+        choice = int(input("Enter your choice (1-4): "))
 
-        if choice == "1":
+        if choice == 1:
             basic_calc = Basic()
+            basic_calc.main()
 
-        elif choice == "2":
+        elif choice == 2:
             log_calc = logs()
+            log_calc.main()
             
 
-        elif choice == "3":
+        elif choice == 3:
             trig_calc = trigz()
+            trig_calc.main()
 
-        elif choice == "4":
+        elif choice == 4:
             print("Goodbye!")
             break
         else:

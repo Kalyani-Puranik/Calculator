@@ -64,64 +64,63 @@ class trigz:
         except Exception as e:
             return f"Error: {e}"
 
+    def main(self):
+        calc = trigz()
 
-def main():
-    calc = trigz()
+        while True:
+            print("\n--- Trigonometric Calculator ---")
+            print("1. sin(x)")
+            print("2. cos(x)")
+            print("3. tan(x)")
+            print("4. cosec(x)")
+            print("5. sec(x)")
+            print("6. cot(x)")
+            print("7. inv_sin(x)  [inverse sin]")
+            print("8. inv_cos(x)  [inverse cos]")
+            print("9. inv_tan(x)  [inverse tan]")
+            print("10. Exit")
 
-    while True:
-        print("\n--- Trigonometric Calculator ---")
-        print("1. sin(x)")
-        print("2. cos(x)")
-        print("3. tan(x)")
-        print("4. cosec(x)")
-        print("5. sec(x)")
-        print("6. cot(x)")
-        print("7. inv_sin(x)  [inverse sin]")
-        print("8. inv_cos(x)  [inverse cos]")
-        print("9. inv_tan(x)  [inverse tan]")
-        print("10. Exit")
+            choice = input("Enter your choice (1-10): ")
 
-        choice = input("Enter your choice (1-10): ")
+            try:
+                if choice in ["1", "2", "3", "4", "5", "6"]:
+                    x = float(input("Enter angle in radians: "))
 
-        try:
-            if choice in ["1", "2", "3", "4", "5", "6"]:
-                x = float(input("Enter angle in radians: "))
+                    if choice == "1":
+                        print("Result:", calc.sin_of(x))
+                    elif choice == "2":
+                        print("Result:", calc.cos_of(x))
+                    elif choice == "3":
+                        print("Result:", calc.tan_of(x))
+                    elif choice == "4":
+                        print("Result:", calc.cosec_of(x))
+                    elif choice == "5":
+                        print("Result:", calc.sec_of(x))
+                    elif choice == "6":
+                        print("Result:", calc.cot_of(x))
 
-                if choice == "1":
-                    print("Result:", calc.sin_of(x))
-                elif choice == "2":
-                    print("Result:", calc.cos_of(x))
-                elif choice == "3":
-                    print("Result:", calc.tan_of(x))
-                elif choice == "4":
-                    print("Result:", calc.cosec_of(x))
-                elif choice == "5":
-                    print("Result:", calc.sec_of(x))
-                elif choice == "6":
-                    print("Result:", calc.cot_of(x))
+                elif choice in ["7", "8", "9"]:
+                    x = float(input("Enter a number: "))
 
-            elif choice in ["7", "8", "9"]:
-                x = float(input("Enter a number: "))
+                    if choice == "7":
+                        print("Result (radians):", calc.asin_of(x))
+                    elif choice == "8":
+                        print("Result (radians):", calc.acos_of(x))
+                    elif choice == "9":
+                        print("Result (radians):", calc.atan_of(x))
 
-                if choice == "7":
-                    print("Result (radians):", calc.asin_of(x))
-                elif choice == "8":
-                    print("Result (radians):", calc.acos_of(x))
-                elif choice == "9":
-                    print("Result (radians):", calc.atan_of(x))
+                elif choice == "10":
+                    print("Goodbye!")
+                    break
 
-            elif choice == "10":
-                print("Goodbye!")
-                break
+                else:
+                    print("Invalid choice! Please try again.")
 
-            else:
-                print("Invalid choice! Please try again.")
-
-        except ValueError:
-            print("Invalid input! Please enter a valid number.")
-        except Exception as e:
-            print(f"Unexpected error: {e}")
+            except ValueError:
+                print("Invalid input! Please enter a valid number.")
+            except Exception as e:
+                print(f"Unexpected error: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    trigz().main()
